@@ -1,0 +1,25 @@
+<div class="container mt-3" style="width: 500px;">
+    
+    <div class="card">
+  <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Age</th>
+        <th scope="col">StudentName</th>
+  
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of weather; ">
+        <td>{{s.date}}</td>
+        <td>
+           {{s.temperatureC}}
+     
+        </td>
+      
+      </tr>
+      </tbody>
+    </table>
+    <button (click)="addPerson()">Submit1</button>
+    </div>
+  </div>

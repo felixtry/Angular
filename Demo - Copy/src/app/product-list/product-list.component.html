@@ -1,0 +1,26 @@
+<div class="container mt-3" style="width: 500px;">
+    
+    <div class="card">
+  <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Age</th>
+        <th scope="col">StudentName</th>
+  
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of stu; ">
+        <td>{{s.ProductName}}</td>
+        <td>
+            <div class="card" style="height: 170px;">
+            <img class="card-img-top" src={{s.ProductImagePath}} style="height: 160px;width: 160PX;">
+        </div>
+        </td>
+       
+     
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>

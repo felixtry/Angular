@@ -1,0 +1,31 @@
+<nav ngbNav #nav="ngbNav" class="nav-tabs">
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink="/Login" routerLinkActive="active">Login</a>
+    
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink routerLink="/StudentList" routerLinkActive="active">StudentList</a>
+  </ng-container>
+
+<ng-container ngbNavItem>
+  <a ngbNavLink routerLink="/Product" routerLinkActive="active">Products</a>
+</ng-container>
+
+<ng-container ngbNavItem>
+  <a ngbNavLink routerLink="/ParentChild" routerLinkActive="active">ParentChild</a>
+</ng-container>
+<ng-container ngbNavItem>
+  <a ngbNavLink routerLink="/TemplateDriven" routerLinkActive="active">TemplateDriven</a>
+</ng-container>
+<ng-container ngbNavItem>
+  <a ngbNavLink routerLink="/Reactive" routerLinkActive="active">Reactive</a>
+</ng-container>
+<ng-container ngbNavItem>
+  <a ngbNavLink routerLink="/ServiceCall" routerLinkActive="active">ServiceCall without http</a>
+</ng-container>
+<ng-container ngbNavItem>
+  <a ngbNavLink routerLink="/httpServiceCall" routerLinkActive="active">ServiceCall with http</a>
+</ng-container>
+</nav>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

@@ -1,0 +1,45 @@
+
+<div class="container mt-3" style="width: 500px;">
+    
+    <div class="card">
+        <div class="card"><div class="card-body">
+          <div class="btn-group">
+            <button [disabled]="isDisabled" [style.border-top-color]="isSignUp ? 'white' : 'green'"   [ngStyle]="{'background-color':isSignUp ? 'grey' : 'green' }"  (click)="comp1('Login')" style="width: 200px;margin-left: 0px;height:50px;margin-top: 20px ;border: 0px;margin-left: 0px;border-top-width: 4px;border-top-style:solid;" class="btn btn-primary">Login</button>   
+            <button [disabled]="isDisabled" [style.border-top-color]="isSignUp ? 'green' : 'white'" [ngStyle]="{'background-color':isSignUp ? 'green' : 'grey'  }" (click)="comp1('SignUp')" style="width: 200px;margin-left: 0px;height: 50px;border: 0px;border-top-width: 4px;border-top-style:solid;margin-top: 20px" class="btn btn-primary">Sign up</button>  
+          </div>
+          <div *ngIf="!isSignUp">
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value={{uID}}>
+                <label for="email">User ID:</label>
+            </div>
+            <div class="form-floating mt-3 mb-3">
+                <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                <label for="pwd">Password</label>
+            </div>
+                <button type="button" style="margin-top: 10px ; width: 260px; height: 40px;border-radius: 4px;font-size:20px" class="btn btn-info" (click)="Navigate()">Login</button> 
+        
+        </div>
+        <div *ngIf="isSignUp">
+          <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+              <label for="email">User ID:</label>
+          </div>
+          <div class="form-floating mt-3 mb-3">
+              <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+              <label for="pwd">Password</label>
+          </div>
+          <div class="form-floating mt-3 mb-3">
+              <input type="text" class="form-control" id="cpwd" placeholder="Enter password" name="pswd">
+              <label for="cpwd">Confirm Password</label>
+          </div>
+      
+      <button type="button" style="margin-top: 10px ; width: 260px; height: 40px;border-radius: 4px;font-size:20px" class="btn btn-info">Sign Up</button> 
+      
+      </div>
+
+
+        </div>
+      </div>
+      
+    </div>
+  </div>

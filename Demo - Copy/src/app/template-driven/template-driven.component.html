@@ -1,0 +1,47 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="container mt-3" style="width: 500px;">
+        <div class="form-floating mb-3 mt-3">
+    <div class="card"> 
+            
+      <label for="firstname">First Name</label>
+      <input type="text" name="firstname" #fname="ngModel" ngModel required="Firstname is required" minlength="10">
+    </div>
+   
+    <div class="card"> 
+      <label for="lastname">Last Name</label>
+      <input type="text" id="lastname" name="lastname" ngModel>
+    </div>
+   
+    <div class="card"> 
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" ngModel>
+    </div>
+   
+    <div class="card"> 
+      <label for="gender">Gender</label>
+      <input type="radio" value="male" id="gender" name="gender"> Male
+      <input type="radio" value="female" id="gender" name="gender"> Female
+    </div>
+   
+    <div class="card"> 
+      <label for="isMarried">Married</label>
+      <input type="checkbox" id="isMarried" name="isMarried">
+    </div>
+   
+    <div class="card"> 
+    <label for="country">country </label>
+    <select name="country" id="country">
+      <option selected="" value=""></option>
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select>
+</div>
+   
+<div class="card"> 
+      <button type="submit" [disabled]="!contactForm.valid" >Submit</button>
+      <pre>Value : {{fname.value}} </pre>
+    </div>
+</div>
+    </div>
+  </form>

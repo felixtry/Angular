@@ -1,0 +1,22 @@
+<div class="container mt-3" style="width: 500px;">
+    
+  <div class="card">
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Age</th>
+      <th scope="col">StudentName</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of stu; ">
+      <td>{{s.age}}</td>
+      <td>{{s.studentname}}</td>
+      <img src="../assets/trash.svg" (click)="deleteRow(s)">
+   
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
